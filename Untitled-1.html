@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abnaa Alhadarat Co</title>
+    <style>
+        :root {
+            --dark-green: #1a472a;
+            --light-green: #2d5a3f;
+            --accent: #e0e0e0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        header {
+            background-color: var(--dark-green);
+            padding: 1.5rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: white;
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+
+        .hero {
+            height: 80vh;
+            background-image: linear-gradient(rgba(26, 71, 42, 0.7), rgba(26, 71, 42, 0.7)), url('1.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .cta-button {
+            padding: 1rem 2rem;
+            background-color: var(--light-green);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .cta-button:hover {
+            background-color: var(--dark-green);
+        }
+
+        .services {
+            max-width: 1200px;
+            margin: 4rem auto;
+            padding: 0 1rem;
+        }
+
+        .services h2 {
+            text-align: right;
+            margin-bottom: 3rem;
+            color: var(--dark-green);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .service-card h3 {
+            color: var(--dark-green);
+            margin-bottom: 1rem;
+        }
+
+        .projects {
+            max-width: 1200px;
+            margin: 4rem auto;
+            padding: 0 1rem;
+        }
+
+        .projects h2 {
+            text-align: right;
+            margin-bottom: 3rem;
+            color: var(--dark-green);
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            height: 250px;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .contact {
+            max-width: 800px;
+            margin: 4rem auto;
+            padding: 0 1rem;
+        }
+
+        .contact h2 {
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--dark-green);
+        }
+
+        .contact-form {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--dark-green);
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .form-group textarea {
+            height: 150px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            background-color: var(--light-green);
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .submit-btn:hover {
+            background-color: var(--dark-green);
+        }
+
+        footer {
+            background-color: var(--dark-green);
+            color: white;
+            padding: 2rem;
+            text-align: right;
+            margin-top: 4rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Abnaa Alhadarat Co </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Abnaa Alhadarat Co</h1>
+            <p> نبني المستقبل </p>
+            <a href="#contact" class="cta-button">ابدأ الآن</a>
+        </div>
+    </section>
+
+    <section class="services" id="services">
+        <h2>خدماتنا</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>التجارة العامة </h3>
+                <p> نقدم خدمات متكاملة لتوريد وتوزيع المنتجات والمواد بأعلى معايير الجودة، مع تلبية احتياجات مختلف القطاعات في السوق العراقي.</p>
+            </div>
+            <div class="service-card">
+                <h3>المجمعات السكنية</h3>
+                <p>نعمل على تصميم وتطوير المجمعات السكنية الحديثة التي تجمع بين الراحة، الأمان، والابتكار، لتلبية احتياجات العائلات العراقية وتحقيق معايير العيش المثالية.</p>
+            </div>
+            <div class="service-card">
+                <h3>التطوير العقاري التجاري والترفيهي</h3>
+                <p>نقدم خدمات تطوير مشاريع عقارية متنوعة تشمل المراكز التجارية، المجمعات الترفيهية، والمساحات التجارية، مع الحرص على توفير تصاميم عصرية وتجارب متميزة تعزز من رفاهية المجتمعات.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="projects" id="projects">
+        <h2>مشاريعنا</h2>
+        <div class="gallery">
+            <div class="gallery-item">
+                <img src="1.jpg" alt="Commercial Building">
+            </div>
+            <div class="gallery-item">
+                <img src="2.jpg" alt="Luxury Home">
+            </div>
+            <div class="gallery-item">
+                <img src="3.jpg" alt="Office Space">
+            </div>
+            <div class="gallery-item">
+                <img src="4.jpg" alt="Renovation">
+            </div>
+            <div class="gallery-item">
+                <img src="5.jpg" alt="Modern House">
+            </div>
+            <div class="gallery-item">
+                <img src="6.jpg" alt="Industrial Building">
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <h2>Contact Us</h2>
+        <form class="contact-form">
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" required></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>جميع الحقوق محفوظة لدى شركة ابناء الحضارات للتجارة والمقاولات العامة</p>
+        <p>العنوان: العراق / بغداد / الجادرية / شارع المهندسة زها حديد</p>
+        <p>الهاتف: 07700000000</p>
+        <p style="text-align: left;">البريد الإلكتروني: <a href="mailto:info@abnaa-alhadarat.com" style="color: #ffd700;">info@abnaa-alhadarat.com</a></p>
+    </footer>
+</body>
+</html>
